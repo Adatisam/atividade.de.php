@@ -11,11 +11,13 @@
     <header>
         <h1>Resultado do processamento</h1>
     </header>
-    <?php 
-        $nome = $_POST["nome"] ?? "sem nome";
-        $sobrenome = $_POST["sobrenome"] ?? "desconhecido"; 
-        echo "<p>É um prazer em conhece-lo $nom $sobrenom!, Seja bem vindo ao Fórum PHP</p>";
-    ?>
-    <p><a href="javascript:history.go(-1)">Voltar para a página anterior.</a></p>
+    <main>
+        <?php
+            $nome = $_POST["nome"] ?? "sem nome";
+            $sobrenome = $_POST["sobrenome"] ?? "desconhecido";
+            echo "<p>É um prazer em conhece-lo $nome $sobrenome!, Seja bem vindo ao Fórum PHP</p>";
+        ?>
+        <p><a href="javascript:history.go(-1)">Voltar para a página anterior.</a></p>
+    </main>
 </body>
 </html>
