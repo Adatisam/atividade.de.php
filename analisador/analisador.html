@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-rb">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analisador de Números inteiros</title>
+    <link rel="stylesheet" href="../formularios/teste.css">
+    <link rel="shortcut icon" href="../formularios/imagens/logophp.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1>Analisador de Números</h1>
+    </header>
+
+    <main>
+        <form action="analisador.php" method="post">
+            <label for="numero">Número Real</label>
+            <p>Digite os números para serem avaliados</p>
+            <input type="number" id="numero" name="numero" required step="0.001">
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </form>
+    </main>
+
+</body>
+</html>
