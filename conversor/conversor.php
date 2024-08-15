@@ -13,7 +13,7 @@
             <h1>Conversor de moedas</h1>
         </header>
             <?php
-                //cotação vinda por API do Banco Central
+                //cotação vinda por API do Banco Central(aparentemente corrigido linhas 17, 32)
                 $inicio = date("Y-m-d", strtotime("-7 days"));
                 $fim = date("d/m/Y");
 

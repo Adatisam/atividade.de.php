@@ -14,12 +14,12 @@
     <main>
         <?php
             $valor = $_POST["numero"] ?? 0;
-            echo "<p>Analisando o número". number_format($valor, 3, "," , ".")."informado pelo usuário:</p>";
+            echo "<p>Analisando o número" . number_format($valor, 3, "," , ".")."informado pelo usuário:</p>";
             
             $inteira = (int) $valor;
             $fracionaria = $valor - $inteira;
-            print "<ul><li><p>A parte inteira do número é: ". number_format($inteira, 0 , "," , ".")."</p></li>".
-            "<li><p>A parte fracionária é: ". number_format($fracionaria, 3 , ",", ".")."</p></li></ul>";
+            print "<ul><li><p>A parte inteira do número é: ". number_format($inteira, 0 , "," , "."). "</p></li>";
+            print "<li><p>A parte fracionária é: ". number_format($fracionaria, 3 , "," , "."). "</p></li></ul>";
         ?>
         <button onclick="javascript:history.go(-1)">Voltar</button>
     </main>
