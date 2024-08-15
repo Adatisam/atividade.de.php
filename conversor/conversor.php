@@ -14,7 +14,7 @@
         </header>
             <?php
                 //cotação vinda por API do Banco Central
-                $inicio = date("m-d-Y", strtotime("-7 days"));
+                $inicio = date("Y-m-d", strtotime("-7 days"));
                 $fim = date("d/m/Y");
 
                 $url = 'https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/CotacaoDolarPeriodo(dataInicial=@dataInicial,dataFinalCotacao=@dataFinalCotacao)?@dataInicial=\''. $inicio .'\'&@dataFinalCotacao=\''. $fim .'\'&$top=1&$orderby=dataHoraCotacao%20desc&$format=json&$select=cotacaoCompra,cotacaoVenda,dataHoraCotacao;';
@@ -29,7 +29,7 @@
                 $real = $_REQUEST["dolar"] ?? 0;
                 $resposta = $real / $cotacao;
 
-                $padrao = numfmt_create("pt-BR",NumberFormatter::CURRENCY);
+                $padrao = NumberFormatter::create("pt-BR",NumberFormatter::CURRENCY);
 
                 print   "<p>Seus " . numfmt_format_currency($padrao, $real, "BRL") . "equivalem a " . numfmt_format_currency($padrao, $resposta, "USD") . "</p>";
             ?>
