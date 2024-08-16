@@ -14,7 +14,7 @@
     <main>
         <?php
             $valor = $_POST["numero"] ?? 0;
-            echo "<p>Analisando o número" . number_format($valor, 3, "," , ".")."informado pelo usuário:</p>";
+            echo "<p>Analisando o número " . number_format($valor, 3, "," , ".")." informado pelo usuário:</p>";
             
             $inteira = (int) $valor;
             $fracionaria = $valor - $inteira;

@@ -8,31 +8,28 @@
     <link rel="shortcut icon" href="../formularios/imagens/logophp.png" type="image/x-icon">
 </head>
 <body>
+    
+    <header>
+        <h1>Conversor de moedas</h1>
+    </header>
     <main>
-        <header>
-            <h1>Conversor de moedas</h1>
-        </header>
-            <?php
-                //cotação vinda por API do Banco Central(aparentemente corrigido linhas 17, 32)
-                $inicio = date("Y-m-d", strtotime("-7 days"));
-                $fim = date("d/m/Y");
+        <?php
+            $inicio = date("m-d-Y", strtotime("-7 days"));
+            $fim = date("m-d-Y");
+        
+            $url = 'https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/CotacaoDolarPeriodo(dataInicial=@dataInicial,dataFinalCotacao=@dataFinalCotacao)?@dataInicial=\''.$inicio.'\'&@dataFinalCotacao=\''.$fim.'\'&$top=1&$orderby=dataHoraCotacao%20desc&$format=json&$select=cotacaoCompra,dataHoraCotacao';
+            $dados = json_decode(file_get_contents($url), true);
+            //var_dump($dados);
+            $cotacao = $dados["value"][0]["cotacaoCompra"];
 
-                $url = 'https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/CotacaoDolarPeriodo(dataInicial=@dataInicial,dataFinalCotacao=@dataFinalCotacao)?@dataInicial=\''. $inicio .'\'&@dataFinalCotacao=\''. $fim .'\'&$top=1&$orderby=dataHoraCotacao%20desc&$format=json&$select=cotacaoCompra,cotacaoVenda,dataHoraCotacao;';
+            //cotacao manual
+            //$cotacao = 5.50;
 
-                $dados = json_decode(file_get_contents($url), true);
+            $real = $_REQUEST["dolar"] ?? 0;
+            $resposta = $real / $cotacao;
 
-                $cotacao = $dados["value"][0]["cotacaoCompra"];
-                
-                //ou, cotacao manual
-                //$cotacao = 5.50;
-
-                $real = $_REQUEST["dolar"] ?? 0;
-                $resposta = $real / $cotacao;
-
-                $padrao = NumberFormatter::create("pt-BR",NumberFormatter::CURRENCY);
-
-                print   "<p>Seus " . numfmt_format_currency($padrao, $real, "BRL") . "equivalem a " . numfmt_format_currency($padrao, $resposta, "USD") . "</p>";
-            ?>
+            print   "<p>Seus R$" . number_format($real, 0, ",", ".") . " equivalem a U$" . number_format($resposta, 2, "," , ".") . "</p>";
+        ?>
         <button onclick="javascript:history.go(-1)">Voltar</button>
     </main>
 </body>
