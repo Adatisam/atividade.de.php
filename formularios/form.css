@@ -22,7 +22,7 @@ body {
     width: 100vw; 
 }
 
-#imagem2 {
+#imagem2, section {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -47,7 +47,7 @@ header > #elefante {
     border-radius: 5px;
 }
 
-header > h1 {
+header > h1, h2 {
     text-align: center;
     margin: 10px;
     color: #17153B;

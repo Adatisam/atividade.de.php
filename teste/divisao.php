@@ -9,21 +9,20 @@
 <body>
     <?php 
         $dividendo = $_GET['num1']?? 0;
-        $divisor = $_GET['num2']?? 1;
+        $divisor = $_GET['num2']?? 0;
     ?>
     <main>
         <h1>Anatomia de uma divisão</h1>
 
         <form action="<?php echo $_SERVER['PHP_SELF']?>" method="get">
             <label for="num1">Digite o dividendo</label>
-            <input type="number" id="num1" name="num1" value=" <?php $dividendo?> ">
+            <input type="number" id="num1" name="num1" >
             <label for="num2">Digite o divisor</label>
-            <input type="number" name="num2" id="num2" value=" <?php $divisor?> ">
+            <input type="number" name="num2" id="num2" >
             <input type="submit" value="Analisar">
-            <input type="reset" value="Limpar">
         </form>
     </main>
-    <section id="resultado">
+    <section>
         <h2>Estrutura da divisão</h2>
         <?php 
             $quociente = intdiv($dividendo, $divisor);  
@@ -33,24 +32,24 @@
             <tr>
                 <td>
                     <?php 
-                        $dividendo
+                        print $dividendo;
                     ?>
                 </td>
                 <td>
                     <?php 
-                        $divisor
+                        print $divisor;
                     ?>
                 </td>
             </tr>
             <tr>
                 <td>
                     <?php 
-                        $quociente
+                        print $quociente;
                     ?>
                 </td>
                 <td>
                     <?php 
-                        $resto
+                        print $resto;
                     ?>
                 </td>
             </tr>
