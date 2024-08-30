@@ -11,11 +11,12 @@
         $c1 = new caneta;
         $c1 -> cor = "Azul";
         $c1 -> modelo = "BIC cristal";
-        $c1 -> ponta = 0.5;
-        $c1 -> tampada = true;
+        //$c1 -> ponta = 0.5;
+        //$c1 -> tampada = true;
         var_dump($c1);
+        $c1 -> destampar();
         $c1 -> rabiscar();
-        $c1 -> tampar();
+        
     ?>
 </body>
 </html>

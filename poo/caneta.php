@@ -5,6 +5,7 @@
         private $ponta;
         protected $carga;
         protected $tampada;
+        protected $destanpada;
         
          public function rabiscar() {
             if ($this-> tampada == true) {
