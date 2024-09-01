@@ -23,7 +23,7 @@
                 echo "<p>Conta esta em débito, não esta autorizada a fechar!</p>";
             } else {
                 $this-> setStatus(false);
-                echo "<p>Conta de " . $this -> getDono() . "fechada com sucesso!</p>";
+                echo "<p>Conta de " . $this -> getDono() . " fechada com sucesso!</p>";
             }
         }
 
@@ -41,7 +41,7 @@
                 if ($this-> getStatus() >= $v) {
                     $this-> setSaldo($this-> getSaldo() - $v);
                     echo "<p>Saque de $v autorisado na conta de " .$this -> getDono(). ".</p>";
-                } else {
+            } else {
                     echo "<p>Saldo insuficiente!</p>";
                 }
             } else {
