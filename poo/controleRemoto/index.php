@@ -15,12 +15,15 @@
             $c1 -> ligar();
             //$c1 -> desligar();
             $c1 -> abrirMenu();
-            $c1 -> maisVolume();
-            //$c1 -> menosVolume(10);
+            //$c1 -> fecharMenu();
+            $c1 -> maisVolume(10);
+            //$c1 -> menosVolume();
             //$c1 -> ligarMudo();
             //$c1 -> desligarMudo();
             //$c1 -> play();
-            //$c1 -> pause();
+            $c1 -> pause();
+
+            var_dump($c1)
         ?>
     </pre>
 </body>

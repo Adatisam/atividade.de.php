@@ -53,12 +53,17 @@
         }
         public function maisVolume(){
             if ($this-> getLigado()) {
-                $this-> setVolume($this-> getVolume() + 5);
+                $this-> setLigado($this-> getVolume() + 5);
+            }
+            else {
+                echo "EROO!";
             }
         }
         public function menosVolume(){
             if ($this-> getLigado()) {
-                $this-> setVolume($this-> getVolume() - 5);
+                $this-> setLigado($this-> getVolume() - 5);
+            } else {
+                echo "EROO!";
             }
         }
         public function ligarMudo(){
