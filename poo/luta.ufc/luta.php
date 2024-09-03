@@ -42,7 +42,7 @@
           } else {
                echo "<p>A luta foi cancelada!</p>";
           }
-     }
+      }
 
        function getDesafiante() {
           return $this-> desafiante;
