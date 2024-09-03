@@ -1,6 +1,5 @@
 <?php 
-    require "metodo.php";
-    class lutador implements horaDaLuta {
+    class lutador {
         private $nome;
         private $nacionalidade;
         private $idade;

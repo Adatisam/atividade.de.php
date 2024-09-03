@@ -10,6 +10,8 @@
     <pre>
         <?php 
             require "lutador.php";
+            require "luta.php";
+
             $l1 = new lutador("Pretty boy", "França", 31, 1.75, 68.9, 11, 2, 1 );
             //var_dump($l1)
             $l1 -> apresentar();
@@ -49,6 +51,10 @@
             //$l5 -> ganharLuta();
             //$l5 -> perderLuta();
             //$l5 -> empatarLuta();
+
+            $UFC01 = new luta();
+            $UFC01 -> marcarLuta($l1, $l2);
+            $UFC01 -> lutar();
 
         ?>
     </pre>
