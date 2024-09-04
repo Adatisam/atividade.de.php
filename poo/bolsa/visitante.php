@@ -1,3 +1,3 @@
 <?php 
-    class visitantes {}
+    class visitantes extends Pessoa {}
 ?>
