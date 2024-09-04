@@ -23,6 +23,11 @@
             $p[2]->setNome("Patri");
             $p[3]->setNome("Boy");
 
+            $p[0]->setIdade(23);
+            $p[1]->setIdade(21);
+            $p[2]->setIdade(20);
+            $p[3]->setIdade(15);
+
             $p[0]->setSexo("M");
             $p[1]->setSexo("M");
             $p[2]->setSexo("M");
