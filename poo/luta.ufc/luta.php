@@ -1,13 +1,12 @@
 <?php 
-    require 'lutador.php';
-    class luta {
+    class Luta {
        private $desafiante;
        private $desafiado;
        private $round;
        private $aprovada;
 
        public function marcarLuta($l1, $l2) {
-          if ($l1-> getCategoria() === $l2-> getCategoria() && ($l1 != $l2)) {
+          if ($l1-> getCategoria() === $l2-> getCategoria() && ($l1 !== $l2)) {
                $this-> aprovada = true;
                $this-> desafiado = $l1;
                $this-> desafiante = $l2;
@@ -34,7 +33,7 @@
                         $this-> desafiante -> perderLuta();
                         break;
                     case 2: //Desafiante vence
-                        echo "O vencedor é ". $this-> desafiado -> getNome(). "!";
+                        echo "O vencedor é ". $this-> desafiante -> getNome(). "!";
                         $this-> desafiado -> perderLuta();
                         $this-> desafiante -> ganharLuta();
                         break;

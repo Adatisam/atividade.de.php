@@ -1,5 +1,5 @@
 <?php 
-    class Pessoa {
+    class Pessoa { //diz que tem um erro aqui!
         private $nome;
         private $idade;
         private $sexo;
@@ -13,7 +13,7 @@
             $this-> idade = $id;
             $this-> sexo = $sx;
         }
-
+        
         public function getNome() {
             return $this-> nome;
         }

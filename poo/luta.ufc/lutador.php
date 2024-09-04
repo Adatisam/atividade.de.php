@@ -1,5 +1,5 @@
 <?php 
-    class lutador {
+    class Lutador { //diz que tem um erro aqui!
         private $nome;
         private $nacionalidade;
         private $idade;
@@ -58,11 +58,11 @@
         function setCategoria() {
             if ($this-> peso < 52.2 ) {
                 $this-> categoria = "Iválido";
-            } elseif ($this-> categoria <= 70.3) {
+            } elseif ($this-> peso <= 70.3) {
                 $this-> categoria = "Pena";
-            } elseif ($this-> categoria <= 83.9) {
+            } elseif ($this-> peso <= 83.9) {
                 $this-> categoria = "Médio";
-            } elseif ($this-> categoria <= 120.2) {
+            } elseif ($this-> peso <= 120.2) {
                 $this-> categoria = "Pesado";
             } else {
                 $this-> categoria = "Inválido";
@@ -80,7 +80,7 @@
         function setDerrotas($de) {
             $this-> derrotas = $de;
         }
-        function geetEmpates() {
+        function getEmpates() {
             return $this-> empates;
         }
         function setEmpates($em) {
@@ -89,28 +89,28 @@
         
         public function apresentar() {
             echo "<p>-------------------------------</p>";
-            echo "<p>CHEGOU A HORA! O lutador " . $this-> getNome();
+            echo "<p>CHEGOU A HORA! O lutador" . $this-> getNome();
             echo " veio diretamente de " . $this->getNacionalidade();
             echo ", com " . $this-> getIdade() . " anos, ";
             echo "medindo " . $this->getAltura() . " metros de altura, ";
             echo "pesando " . $this->getPeso() . " Kg, ";
             echo $this-> getVitorias() . " Vitórias, ";
             echo $this-> getDerrotas() . " Derrotas, e ";
-            echo $this-> geetEmpates() . " Empates";
+            echo $this-> getEmpates() . " Empates</p>";
         }
         public function status() {
             echo "<p>-------------------------------</p>";
             echo $this-> getNome() . " é um peso " . $this-> getCategoria();
-            echo " e já ganhou " . $this-> getVitorias() . " vezes, perdeu " . $this-> getDerrotas() . " e empatou " . $this-> geetEmpates(). "!";
+            echo " e já ganhou " . $this-> getVitorias() . " vezes, perdeu " . $this->getDerrotas() . " e empatou " . $this-> getEmpates(). "!";
         }
         public function ganharLuta() {
-            $this-> setVitorias($this-> getVitorias() + 1);
+            $this->setVitorias($this->getVitorias() + 1);
         }
         public function perderLuta() {
-            $this-> setDerrotas($this-> getDerrotas() + 1);
+            $this->setDerrotas($this->getDerrotas() + 1);
         }
         public function empatarLuta() {
-            $this-> setEmpates($this-> geetEmpates() + 1);
+            $this->setEmpates($this->getEmpates() + 1);
         }
     }
 ?>

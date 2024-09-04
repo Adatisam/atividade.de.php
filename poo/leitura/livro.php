@@ -1,8 +1,7 @@
 <?php 
-    require 'pessoa.php';
-    require 'publicacao.php';
+    //require "publicacao.php";
 
-    class livro implements publicacao {
+    class Livro {//implements Publicacao {
         private $titulo;
         private $autor;
         private $totPaginas;

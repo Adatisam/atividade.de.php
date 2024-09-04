@@ -10,11 +10,12 @@
         <?php 
             require 'pessoa.php';
             require 'livro.php';
+            require 'publicacao.php';
 
             $p[0] = new Pessoa("Pedro", 23, "M");
             var_dump($p[0]);
 
-            $l[0] = new livro("POO in PHP", "Alfredo Noronha", 300, $p[0]);
+            $l[0] = new Livro("POO in PHP", "Alfredo Noronha", 300, $p[0]);
             var_dump($l[0]);
             $l[0] -> abrir();
             $l[0] -> detalhes();
