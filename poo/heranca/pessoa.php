@@ -5,15 +5,15 @@
         private $sexo;
 
         public function fazerAniversario() {
-            $this-> idade ++;            
+            $this-> idade ++;
         }
 
         public function __construct($no, $id, $sx) {
-            $this-> nome = $no;
-            $this-> idade = $id;
-            $this-> sexo = $sx;
+            $this->nome = $no;
+            $this->idade = $id;
+            $this->sexo = $sx;
         }
-        
+
         public function getNome() {
             return $this-> nome;
         }
