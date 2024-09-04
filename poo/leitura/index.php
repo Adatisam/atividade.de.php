@@ -19,10 +19,10 @@
             var_dump($l[0]);
             $l[0] -> abrir();
             $l[0] -> detalhes();
-            $l[0] -> fechar();
-            $l[0] -> folhear(10);
-            $l[0] -> avancarPag();
-            $l[0] -> voltarPag();
+            //$l[0] -> fechar();
+            //$l[0] -> folhear(10);
+            //$l[0] -> avancarPag();
+            //$l[0] -> voltarPag();
         ?>
     </pre>
 </body>
