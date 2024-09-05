@@ -30,6 +30,24 @@
             $m1->alimentar();
             $m1->locomover();
             $m1->emitirSom();
+            $m1->reagirFrase("Olá");
+            $m1->reagirFrase("Vai apanhar!");
+            $m1->reagirHora(11, 45);
+            $m1->reagirHora(21, 00);
+            $m1->reagirDono(true);
+            $m1->reagirDono(false);
+            $m1->reagirIdadePeso(5, 3.5);
+            $m1->reagirIdadePeso(11, 11);
+
+
+            $lb1 = new Lobo();
+            $lb1->setPeso(42.5);
+            $lb1->setIdade(5);
+            $lb1->setMembro(4);
+            $lb1->setCorPelo("Cinza");
+            $lb1->alimentar();
+            $lb1->locomover();
+            $lb1->emitirSom();
 
             $r1 = new Tartaruga();
             $r1->setPeso(25);
