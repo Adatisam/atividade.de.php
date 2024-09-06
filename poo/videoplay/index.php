@@ -18,10 +18,22 @@
             $v-> like();
             var_dump($v);
 
-
             $al = new Aluno("Comand", 16, "M", 01);
             $al->assistirMaisUm();
             var_dump($al);
+            $al2 = new Aluno("Cobra", 20, "M", 02);
+            var_dump($al2);
+
+            $vi= new Visualisacao($al, $v);
+            var_dump($vi);
+            $vi-> avaliar();
+            $vi->avaliarNota(2);
+            $vi->avaliarPorcem(2);
+            $vi2= new Visualisacao($al2, $v);
+            var_dump($vi2);
+            $vi2-> avaliar();
+            $vi2->avaliarNota(5);
+            $vi2->avaliarPorcem(5);
 
         ?>
     </pre>

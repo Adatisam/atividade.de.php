@@ -35,7 +35,8 @@
             return $this->avaliacao;
         }
         public function setAv($av) {
-            $this->avaliacao = $av;
+            $media = ($this->avaliacao + $av) / $this->views;
+            $this->avaliacao = $media;
         }
         public function getViews() {
             return $this->views;
