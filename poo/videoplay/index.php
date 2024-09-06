@@ -13,8 +13,14 @@
             require "aluno.php";
             
             $v = new Video("POO");
+            //$v-> play();
+            $v-> pause();
+            $v-> like();
             var_dump($v);
+
+
             $al = new Aluno("Comand", 16, "M", 01);
+            $al->assistirMaisUm();
             var_dump($al);
 
         ?>

@@ -15,10 +15,10 @@
             echo "<p>Construiu ninho</p>";
         }
 
-        function getCorEscama() {
+        function getCorPena() {
             return $this-> corPena;
         }
-        function setCorEscama($cpe) {
+        function setCorPena($cpe) {
             $this-> corPena = $cpe;
         }
     }

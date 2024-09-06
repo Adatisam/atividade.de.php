@@ -1,4 +1,5 @@
 <?php 
+    require "acesvideo.php";
     class Video implements AcesVideo {
         private $titulo;
         private $avaliacao;
@@ -39,7 +40,7 @@
         public function getViews() {
             return $this->views;
         }
-        public function set($vw) {
+        public function setViews($vw) {
             $this->views = $vw;
         }
         public function getCurtidas() {

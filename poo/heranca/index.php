@@ -13,10 +13,10 @@
             require "professor.php";
             require "funcionario.php";
 
-            $p[0] = new Pessoa();
-            $p[1] = new Aluno();
-            $p[2] = new Professor();
-            $p[3] = new Funcionario();
+            $p[0] = new Pessoa("Karm", 23, "M");
+            $p[1] = new Aluno("PeixeBoi", 21, "M",1);
+            $p[2] = new Professor("Patr", 20, "M");
+            $p[3] = new Funcionario("Boy", 15, "M");
 
             $p[0]->setNome("Karm");
             $p[1]->setNome("PeixeBoi");
@@ -37,9 +37,12 @@
             $p[2]->setSal(2500.75);
             $p[3]->setSetor("Estoque");
 
-            $p[0]->receberAum(550.23); 
-            $p[1]->mudarTrabalho(); 
-            $p[3]->cancelarMatr();  
+            $p[1]-> setMatr(0001);
+            $p[2]-> setEsp("Ciêncica da computação");
+
+            $p[2]->receberAum(550.23); 
+            $p[3]->mudarTrabalho(); 
+            $p[1]->cancelarMatr();  
 
             var_dump($p);
 

@@ -20,6 +20,7 @@
             require "cobra.php";
             require "tartaruga.php";
             require "goldfish.php";
+            require "lobo.php";
 
 
             $m1 = new Cachorro();
@@ -27,9 +28,9 @@
             $m1->setIdade(3);
             $m1->setMembro(4);
             $m1->setCorPelo("Preto");
-            $m1->alimentar();
-            $m1->locomover();
-            $m1->emitirSom();
+            //$m1->alimentar();
+            //$m1->locomover();
+            //$m1->emitirSom();
             $m1->reagirFrase("Olá");
             $m1->reagirFrase("Vai apanhar!");
             $m1->reagirHora(11, 45);
@@ -40,7 +41,7 @@
             $m1->reagirIdadePeso(11, 11);
 
 
-            $lb1 = new Lobo();
+            /*$lb1 = new Lobo();
             $lb1->setPeso(42.5);
             $lb1->setIdade(5);
             $lb1->setMembro(4);
@@ -68,15 +69,15 @@
             $p1->emitirSom();
             $p1->soltarBolha();
 
-            $a1 = new Arara();
+            $a1 = new Ave();
             $a1->setPeso(0.200);
             $a1->setIdade(3);
             $a1->setMembro(4);
-            $a1->setCorEscama("Vermelho");
+            $a1->setCorPena("Vermelho");
             $a1->alimentar();
             $a1->locomover();
             $a1->emitirSom();
-            $a1->fazerNinho();
+            $a1->fazerNinho();*/
         ?>
     </pre>
 </body>
